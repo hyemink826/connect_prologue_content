@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리멤버 커넥트 콘텐츠 아이데이션</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-color: #2D3748;
+            --secondary-color: #718096;
+            --accent-color: #4A90E2;
+            --bg-color: #F7FAFC;
+            --card-bg: #FFFFFF;
+            --border-color: #E2E8F0;
+        }
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+        }
+
+        .section {
+            border-left: 5px solid var(--accent-color);
+            padding-left: 20px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-header {
+            cursor: pointer;
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-header::after {
+            content: '+';
+            font-size: 2em;
+            font-weight: 400;
+            transition: transform 0.3s ease;
+        }
+
+        .section.active .section-header::after {
+            content: '-';
+            transform: rotate(180deg);
+        }
+
+        .section-content {
+            display: none;
+            padding-top: 15px;
+            color: var(--secondary-color);
+            font-size: 1em;
+            transition: all 0.4s ease;
+        }
+
+        .section.active .section-content {
+            display: block;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        ul li::before {
+            content: '✔️';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .main-point {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .strategy {
+            background-color: #F0F4F8;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .strategy h3 {
+            color: var(--accent-color);
+            font-size: 1.4em;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>리멤버 커넥트 콘텐츠 아이데이션</h1>
+        <p class="subtitle">브랜드콘텐츠파트 김혜민</p>
+
+        <div class="section" id="section-1">
+            <h2 class="section-header">왜 ‘프롤로그’ 콘텐츠를 활용하는가?</h2>
+            <div class="section-content">
+                <p><strong>문제점:</strong></p>
+                <ul>
+                    <li>프로필을 등록한 사람들이 서로 소통이 부진합니다.</li>
+                    <li>연결될 만한 계기·소재가 부족합니다.</li>
+                    <li>‘나서지 못하는’ 한국 문화 특성상 먼저 소통을 타진하기에 부담이 있습니다.</li>
+                </ul>
+                <p><strong>프롤로그의 역할:</strong></p>
+                <ul>
+                    <li>‘이 시대 프로페셔널’의 성공 인사이트를 제공합니다.</li>
+                    <li>프로들과 ‘연결’되어 멘토링을 받을 수 있는 기회를 마련합니다.</li>
+                </ul>
+                <p><strong>콘텐츠 전환 목표:</strong></p>
+                <ul>
+                    <li>방대한 롱폼 아티클을 ‘씹고 뜯고 맛보고 즐길 수 있는’ 진입 장벽 낮은 콘텐츠로 가공합니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-point">✅ <strong>전략:</strong> 커리어 생애주기별 성장을 돕는 3가지 주제의 큐레이션 콘텐츠</div>
+
+        <div class="section strategy" id="section-2">
+            <h2 class="section-header">전략 1. 챌린지: 프로의 루틴(가제)</h2>
+            <div class="section-content">
+                <p><strong>방향:</strong> 프로들의 성공을 도운 그들만의 독특한 루틴을 소개합니다.</p>
+                <p><strong>예시:</strong> 책, 영화, 드라마, 운동 등 그 루틴이 성공에 어떤 도움과 영감을 줬는지 소개합니다.</p>
+            </div>
+        </div>
+
+        <div class="section strategy" id="section-3">
+            <h2 class="section-header">전략 2. 멘토링: 이 주의 커리어 톡(가제)</h2>
+            <div class="section-content">
+                <p><strong>방향:</strong> 리멤버 인물 검색 탭의 산업별 분류를 활용해 트렌드를 소개하고, 프로들의 뾰족한 인사이트와 솔루션을 제공합니다.</p>
+                <p><strong>세부 계획:</strong></p>
+                <ul>
+                    <li>유저들의 추가 의견이나 질문이 가능하도록 설계합니다.</li>
+                    <li>베스트 의견이나 질문에는 보상을 제공합니다.</li>
+                    <li>금융, 전자/전기, 스타트업 등 8가지 분야를 매주 하나씩 발행합니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section strategy" id="section-4">
+            <h2 class="section-header">전략 3. 치얼업: 프로의 오답노트(가제)</h2>
+            <div class="section-content">
+                <p><strong>방향:</strong> ‘리멤버 커뮤니티’ 데이터 기반으로 직장인들의 일반적인 고민(자존감 하락, 이직 기준, 번아웃 등)에 대해 프로들의 솔루션을 제공합니다.</p>
+                <p><strong>예시:</strong> 프로의 오답노트 ‘회사에서 진짜 자존감을 지키는 법’</p>
+            </div>
+        </div>
+
+        <div class="section" id="section-5">
+            <h2 class="section-header">기대 효과</h2>
+            <div class="section-content">
+                <ul>
+                    <li>"누구와 이야기해야 할지 모르겠다"는 문제점을 해결하고, 자연스럽게 대화 상대를 찾아 줍니다.</li>
+                    <li>프롤로그 26인 전문가들을 매개로 커넥트 서비스 내에서 의미 있는 연결이 이루어질 수 있도록 돕습니다.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const header = section.querySelector('.section-header');
+                header.addEventListener('click', () => {
+                    section.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
